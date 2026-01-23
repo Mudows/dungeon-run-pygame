@@ -33,4 +33,33 @@
   - **labirintos 7-9:** tema demoníaco, inferno congelado. Inimigos são demônios, abominações e sombras.
   - **labirinto 10:** tema horror cósmico. Não exatamente um labirinto, mas uma fase fixa no estilo arena. 3 ondas de inimigos, abominações corrompidas dos níveis anteriores. Depois da terceira, o chefe se revela (inspirado em chthulu).
 - **Derrota:** Em caso de derrota, tela de game over aparece, perguntando se o jogador deseja continuar. Se sim, o jogo volta do nível 0, levando em conta qualquer herança conquistada. Se não, o jogo volta para o menu principal.
-- **Vitória:** O jogador derrota o chefe do labirinto 10. Com isso, ele salva o mundo da invasão dos monstros do outro lado.
+- **Vitória:** O jogador derrota o chefe do labirinto 10. Com isso, ele salva o mundo da invasão dos monstros do outro lado. Jogador automaticamente herda um item lendário deste nível.
+- Deve ser possível expandir a quantidade de labirintos no futuro.
+
+## Estética (Aesthetics)
+- Visual
+  - Pixel 16 bit
+  - Dark Fantasy
+- Sonorização
+  - 16 bit
+  - BGM inspirado no gênero musical Metal
+    - Referências: Blind Guardian, Iced Earth, Demons & Wizards
+    - Música específica por tema do nível
+  - SFX
+    - Adquirir itens
+    - Acertar ataques
+    - Sofrer dano
+    - Morte do jogador
+    - Morte das criaturas
+    - Morte dos chefes
+    - Vitória contra chefes
+    - Vitória contra chefão final
+    - Movimento do jogador
+
+## Tecnologia (Technology)
+- PyGame
+  - Sitema principal de desenvolvimento do jogo
+- PyTest
+  - Teste de sanidade para as mecânicas lógicas do jogo
+- Piskel
+  - Arte em pixel
