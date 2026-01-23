@@ -4,15 +4,21 @@
 - **Gênero:** Roguelike
 - **Plataforma:** PC
 - **Faixa Etária:** 10+
+- **Câmera:** Top-down (90°)
 
 ## Mecânicas (Mechanics)
 ### Jogador
 - **Status Inicial:**
   - 10 de Vida
+    - Se chegar a 0, jogador morre
   - 10 de Mana
+    - Usado para ativar magias
   - Ataque = 1
+    - É utilizado para realizar ataques físicos
   - Defesa = 1
+    - É utilizado para reduzir o dano recebido
   - Magia = 1
+    - Utilizado para realizar ataques com magia
 - **Equipamento Inicial:**
   - 1x espada de aventureiro que causa 1 de dano
   - 2x Emplastros
@@ -25,13 +31,14 @@
 ### Geral
 - Movimentação baseada em turnos em grid;
 - Equipamento define habilidade
-- ***Herança do Herói:*** Ao final de cada 3 fases, o jogador pode transferir um item para o baú do nível 0. Caso morra, o novo personagem "herda" esses itens e pode começar a exploração com eles.
+- ***Herança do Herói:*** Ao final de cada 3 fases, o jogador pode transferir um item para o *Baú da Guilda* do nível 0. Caso morra, o novo personagem "herda" esses itens e pode começar a exploração com eles.
+  - O *Baú da Guilda* suporta até 6 itens hereditários.
 - Progressão se dá por escolhas no fim de cada nível, podendo aumentar o máximo de vida ou mana.
 - O jogador recupera toda a vida e mana ao derrotar o chefe que aparece a cada 3 labirintos.
 
 ### Equipamento
 - **Itens equipáveis:**
-  - Armadura (*reduz dano*)
+  - Armadura (*incrementa na defesa*)
   - Arma (*define dano*)
   - Amuleto (*efeitos diversos*)
   - 2 itens consumíveis
