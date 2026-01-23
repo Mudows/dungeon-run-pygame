@@ -6,24 +6,34 @@
 - **Faixa Etária:** 10+
 
 ## Mecânicas (Mechanics)
-- Movimentação baseada em turnos
+- Jogador começa com 10 de Vida e Mana, uma espada de aventureiro que causa 1 de dano, sem armadura e sem amuleto. 2 Emplastros e 1 Éter. Sem Dinheiro.
+- Movimentação baseada em turnos em grid;
 - Equipamento define habilidade
 - ***Herança do Herói:*** Ao final de cada 3 fases, o jogador pode transferir um item para o baú do nível 0. Caso morra, o novo personagem "herda" esses itens e pode começar a exploração com eles.
 - Progressão se dá por escolhas no fim de cada nível, podendo aumentar o máximo de vida ou mana.
 - O jogador recupera toda a vida e mana ao derrotar o chefe que aparece a cada 3 labirintos.
 - **Itens equipáveis:**
-  - Armadura (*defesa/reduz dano*)
-  - Arma (*define ataque e dano*)
+  - Armadura (*reduz dano*)
+  - Arma (*define dano*)
   - Amuleto (*efeitos diversos*)
+  - 2 itens consumíveis
+  - *Emplastros* e *Éter* não precisam ser equipados, e podem ser acessados a qualquer momento via tecla de atalho.
 - **Itens cosumíveis:**
-  - Emplastro (*regenera 30% de vida em um intervalo de 5 rodadas*)
-  - Éter (*equivalente a poção de mana. Aumenta o valor imediatamente*)
-  - Bombas (*itens que podem ser lançados e causam efeito em área*)
+  - Emplastro (*regenera 3 de vida*)
+  - Éter (*regenera 4 de mana*)
+  - Bombas (*itens que podem ser lançados e causam efeito em área. Alcance de 3 quadrados de distância. Não afetam ou ultrapassam paredes.*)
+    - **Explosão:** Causa 3 de dano em uma área de 3x3
+    - **Fumaça:** Cobre área com fumaça, bloqueando a visão em uma área de 3x3 por 3 rodadas.
+    - **Ácido:** Cobre área com ácido, causando 2 de dano em quem parar em um quadrado afetado. Afeta uma área de 3x3 por 3 rodadas.
   - Elixires (*causam efeitos diversos, como invisibilidade, aumento de dano, etc*)
-- **Inventário limitado**
-  - Limite de 10 itens carregados, excluindo os equipados.
-  - Consumíveis devem ser equipados antes de usados.
-  - Apenas 2 consumíveis podem ser equipados, enquanto *Emplastro* e *Éter* devem estar "*equipados de forma fixa*".
+- **Inventário**
+  - Possui apenas 10 slots.
+  - Itens consumíveis iguais se acumulam, ocupando o mesmo slot.
+  - *Emplastros* e *Éter* não ocupam slot no inventário. Podem ter no máximo 10 de cada.
+- **Dinheiro**
+  - Ouro pode ser acumulado durante o jogo, encontrado em baús ou de inimigos derrotados
+  - É contado separadamente. Ou seja, não ocupa slot do inventário.
+  - Usado para comprar consumíveis do vendedor misterioso que aparece nos labirintos 2, 5, 8 e 10.
 
 ## Narrativa (Story)
 - 10 labirintos jogáveis + nível 0 como hub inicial.
