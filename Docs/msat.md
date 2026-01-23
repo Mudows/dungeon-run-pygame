@@ -6,12 +6,30 @@
 - **Faixa Etária:** 10+
 
 ## Mecânicas (Mechanics)
-- Jogador começa com 10 de Vida e Mana, uma espada de aventureiro que causa 1 de dano, sem armadura e sem amuleto. 2 Emplastros e 1 Éter. Sem Dinheiro.
+### Jogador
+- **Status Inicial:**
+  - 10 de Vida
+  - 10 de Mana
+  - Ataque = 1
+  - Defesa = 1
+  - Magia = 1
+- **Equipamento Inicial:**
+  - 1x espada de aventureiro que causa 1 de dano
+  - 2x Emplastros
+  - 1x Éter
+
+> **Evolução**
+> - Cada vez quer temina um labririnto, ele escolhe aumentar ATQ, DEF, ou MAG em 1 ponto ou aumentar VIDA ou MANA máxima em 5 pontos.
+> - Quando conclui os labirintos 3, 6 e 9, ele pode fazer essa escolha duas vezes.
+
+### Geral
 - Movimentação baseada em turnos em grid;
 - Equipamento define habilidade
 - ***Herança do Herói:*** Ao final de cada 3 fases, o jogador pode transferir um item para o baú do nível 0. Caso morra, o novo personagem "herda" esses itens e pode começar a exploração com eles.
 - Progressão se dá por escolhas no fim de cada nível, podendo aumentar o máximo de vida ou mana.
 - O jogador recupera toda a vida e mana ao derrotar o chefe que aparece a cada 3 labirintos.
+
+### Equipamento
 - **Itens equipáveis:**
   - Armadura (*reduz dano*)
   - Arma (*define dano*)
@@ -37,6 +55,9 @@
   - Ouro pode ser acumulado durante o jogo, encontrado em baús ou de inimigos derrotados
   - É contado separadamente. Ou seja, não ocupa slot do inventário.
   - Usado para comprar consumíveis do vendedor misterioso que aparece nos labirintos 2, 5, 8 e 10.
+
+### Combate
+  - 
 
 ## Narrativa (Story)
 - 10 labirintos jogáveis + nível 0 como hub inicial.
