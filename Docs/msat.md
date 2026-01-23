@@ -25,7 +25,10 @@
     - **Explosão:** Causa 3 de dano em uma área de 3x3
     - **Fumaça:** Cobre área com fumaça, bloqueando a visão em uma área de 3x3 por 3 rodadas.
     - **Ácido:** Cobre área com ácido, causando 2 de dano em quem parar em um quadrado afetado. Afeta uma área de 3x3 por 3 rodadas.
-  - Elixires (*causam efeitos diversos, como invisibilidade, aumento de dano, etc*)
+  - Elixires (*causam efeitos diversos*)
+    - **Invisibilidade:** inimigos ignoram o jogador por 5 rodadas;
+    - **Fúria Líquida:** aumenta o dano físico da arma em 50% por 3 ataques. Funciona apenas com armas corpo-a-corpo;
+    - **Destilado Arcano:** magias custam metade da mana para usar por 3 rodadas. mínimo 1 de custo.
 - **Inventário**
   - Possui apenas 10 slots.
   - Itens consumíveis iguais se acumulam, ocupando o mesmo slot.
