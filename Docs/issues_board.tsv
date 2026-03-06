@@ -1,0 +1,20 @@
+Title	URL	Assignees	Status	Linked pull requests	Sub-issues progress
+feat: Configurar projeto PyGame base	https://github.com/Mudows/dungeon-run-pygame/issues/1	Mudows	Todo		
+feat: Grid básico e renderização de tiles	https://github.com/Mudows/dungeon-run-pygame/issues/2	Mudows	Todo		
+feat: Sistema de entidades (Jogador e Inimigo)	https://github.com/Mudows/dungeon-run-pygame/issues/3	Mudows	Todo		
+feat: Input de movimento em grid (WASD/setas)	https://github.com/Mudows/dungeon-run-pygame/issues/4	Mudows	Todo		
+feat: Sistema de turnos (jogador → inimigos)	https://github.com/Mudows/dungeon-run-pygame/issues/5	Mudows	Todo		
+feat: IA goblin básica (atacar ou perseguir)	https://github.com/Mudows/dungeon-run-pygame/issues/6	Mudows	Todo		
+feat: Combate físico corpo a corpo	https://github.com/Mudows/dungeon-run-pygame/issues/7	Mudows	Todo		
+feat: Morte de entidade e game over	https://github.com/Mudows/dungeon-run-pygame/issues/8	Mudows	Todo		
+feat: Gerador de sala única 5x5	https://github.com/Mudows/dungeon-run-pygame/issues/9	Mudows	Todo		
+feat: FOV 5x5 com névoa de guerra	https://github.com/Mudows/dungeon-run-pygame/issues/10	Mudows	Todo		
+feat: UI barras VD/MN e contadores itens	https://github.com/Mudows/dungeon-run-pygame/issues/11	Mudows	Todo		
+feat: Múltiplas salas conectadas (nível 1)	https://github.com/Mudows/dungeon-run-pygame/issues/12	Mudows	Todo		
+feat: Spawn inimigos por nível e drops	https://github.com/Mudows/dungeon-run-pygame/issues/13	Mudows	Todo		
+feat: Portal de vitória e transição nível	https://github.com/Mudows/dungeon-run-pygame/issues/14	Mudows	Todo		
+feat: Inventário 9 slots	https://github.com/Mudows/dungeon-run-pygame/issues/15	Mudows	Todo		
+feat: Variantes goblin (guerreiro/feiticeiro/chefe)	https://github.com/Mudows/dungeon-run-pygame/issues/16	Mudows	Todo		
+feat: Gerador procedural níveis 1–3	https://github.com/Mudows/dungeon-run-pygame/issues/17	Mudows	Todo		
+feat: Viewport câmera 16x16 centrada	https://github.com/Mudows/dungeon-run-pygame/issues/18	Mudows	Todo		
+feat: Menu principal	https://github.com/Mudows/dungeon-run-pygame/issues/19	Mudows	Todo		

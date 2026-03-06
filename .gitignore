@@ -1,3 +1,6 @@
-issues_board.tsv
-.tmp.drivedownload
+*.uistate.json
+ts-defs
+_old
 .tmp.driveupload
+.tmp.drivedownload
+eventSheets
