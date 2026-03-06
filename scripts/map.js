@@ -6,6 +6,7 @@ export class GameMap {
     this.grid = [];
 
     this.generateEmpty();
+    this.generateTestWalls();
   }
 
   // Gera um grid de mapa vazio
@@ -19,9 +20,7 @@ export class GameMap {
     }
   }
 
-  isInside(x, y) {
-    return x >= 0 && y >= 0 && x < this.width && y < this.height;
-  }
+  isInside(x, y) { return x >= 0 && y >= 0 && x < this.width && y < this.height; }
 
   isWall(x, y) {
     if (!this.isInside(x, y)) return true;

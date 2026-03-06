@@ -35,16 +35,16 @@ runOnStartup(async (runtime) => {
 	runtime.addEventListener('keydown', event => {
 		switch (event.key) {
 			case 'ArrowUp':
-				grid.move(player, 0, -1);
+				grid.move(player, 0, -1, map);
 				break;
 			case 'ArrowDown':
-				grid.move(player, 0, 1);
+				grid.move(player, 0, 1, map);
 				break;
 			case 'ArrowLeft':
-				grid.move(player, -1, 0);
+				grid.move(player, -1, 0, map);
 				break;
 			case 'ArrowRight':
-				grid.move(player, 1, 0);
+				grid.move(player, 1, 0, map);
 				break;
 		}
 	});

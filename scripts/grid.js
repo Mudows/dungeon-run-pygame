@@ -21,12 +21,17 @@ export class Grid {
   }
 
   // Move o objeto (instance) em uma direção especificada
-  move(instance, dx, dy) {
+  move(instance, dx, dy, map) {
     const pos = this.toGrid(instance.x, instance.y);
     const newX = pos.x + dx;
     const newY = pos.y + dy;
+
+    if(map.isWall(newX, newY)) return false;
+
     const pixel = this.toPixel(newX, newY);
     instance.x = pixel.x;
     instance.y = pixel.y;
+
+    return true
   }
 }
