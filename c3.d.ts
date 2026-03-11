@@ -1,5 +1,5 @@
 // NOTE: This definition file is auto generated - any changes you make will not be saved
-// 3/8/2026 7:58:02 PM
+// 3/10/2026 9:26:39 PM
 
 declare function runOnStartup(cb: (runtime: IRuntime) => void): void;
 
@@ -44,6 +44,7 @@ type VariableType = Record<string, string | boolean | number | null | undefined>
 interface IRuntimeObjects {
 	['simpleTileset']: IObjectClass<IsimpleTileset>;
 	['player']: IObjectClass<Iplayer>;
+	['audio']: IObjectClass<Iaudio>;
 }
 
 interface IGlobalVars extends VariableType {
@@ -189,6 +190,17 @@ interface IplayerBehaviors extends Record<string, IBehaviorInstance> {
 interface Iplayer extends ISpriteInstance {
 	instVars: IplayerVars;
 	behaviors: IplayerBehaviors;
+}
+
+interface IaudioVars extends VariableType {
+	
+}
+interface IaudioBehaviors extends Record<string, IBehaviorInstance> {
+	
+}
+interface Iaudio extends IAudioObjectType {
+	instVars: IaudioVars;
+	behaviors: IaudioBehaviors;
 }
 
 
