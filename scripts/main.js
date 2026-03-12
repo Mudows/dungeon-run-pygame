@@ -1,18 +1,23 @@
-import { Grid } from './grid.js';
-import { GameMap } from './map.js';
+import { Grid }        from './grid.js';
+import { GameMap }     from './map.js';
+import { TurnManager, Enemy } from './turn.js';
 
 async function OnBeforeProjectStart(runtime) {
   runtime.addEventListener('tick', () => Tick(runtime));
 }
 
 function Tick(runtime) {
-  // Lógica por tick (a ser expandida com sistema de turnos)
+  // Lógica por tick — animações, UI, etc. (a expandir)
 }
 
 runOnStartup(async (runtime) => {
-  // MVP nível 1: mapa 32×32, até 6 salas
-  const grid = new Grid(16);
-  const map  = new GameMap(32, 32, 6);
+  const grid  = new Grid(16);
+  const map   = new GameMap(32, 32, 6);
+  const turns = new TurnManager();
+
+  // Callbacks de turno (úteis para UI e debug)
+  turns.onTurnStart((n) => console.log(`--- Turno ${n} iniciado ---`));
+  turns.onTurnEnd((n)   => console.log(`--- Turno ${n} encerrado ---`));
 
   let player;
   let tileset;
@@ -23,34 +28,49 @@ runOnStartup(async (runtime) => {
     player  = runtime.objects.player.getFirstInstance();
     tileset = runtime.objects.simpleTileset.getFirstInstance();
 
-    // Renderiza o mapa no tilemap
+    // Renderiza o mapa
     map.render(tileset);
 
-    // Posiciona o jogador no centro da primeira sala
+    // Posiciona o jogador em tile de chão válido
     const start = map.getPlayerStart();
     const pos   = grid.toPixel(start.x, start.y);
     player.x = pos.x;
     player.y = pos.y;
 
-    // Debug: exibe salas e spawns de inimigos no console
-    console.log('Salas geradas:', map.rooms);
-    console.log('Spawns de inimigos:', map.getEnemySpawns());
+    // Spawna um inimigo parado em cada sala (exceto a do jogador)
+    for (const spawn of map.getEnemySpawns()) {
+      const enemy = new Enemy(spawn.x, spawn.y, grid);
+      turns.addEnemy(enemy);
+    }
+
+    console.log(`${turns.enemies.length} inimigo(s) spawnado(s)`);
+    console.log('Salas:', map.rooms);
   });
 
+  // ---------------------------------------------------------------------------
+  // Input — cada tecla tenta uma ação do jogador
+  // ---------------------------------------------------------------------------
   runtime.addEventListener('keydown', (event) => {
+    let action = null;
+
     switch (event.key) {
       case 'ArrowUp':
-        grid.move(player, 0, -1, map);
+        action = () => grid.move(player, 0, -1, map);
         break;
       case 'ArrowDown':
-        grid.move(player, 0, 1, map);
+        action = () => grid.move(player, 0, 1, map);
         break;
       case 'ArrowLeft':
-        grid.move(player, -1, 0, map);
+        action = () => grid.move(player, -1, 0, map);
         break;
       case 'ArrowRight':
-        grid.move(player, 1, 0, map);
+        action = () => grid.move(player, 1, 0, map);
         break;
+    }
+
+    // Só processa o turno se houve uma ação mapeada
+    if (action) {
+      turns.playerAct(action, map, grid, player);
     }
   });
 });
