@@ -1,0 +1,31 @@
+{
+  "families": {
+    "goblins": {
+      "name": "Família dos Goblins",
+      "members": [
+        {
+          "id": "goblin",
+          "name": "Goblin",
+          "spriteName": "Goblin",
+          "spawnChance": 70,
+          "stats": {
+            "hp": 6,
+            "atq": 2,
+            "def": 0
+          }
+        },
+        {
+          "id": "goblin_warrior",
+          "name": "Goblin Guerreiro",
+          "spriteName": "GoblinWarrior",
+          "spawnChance": 30,
+          "stats": {
+            "hp": 10,
+            "atq": 4,
+            "def": 1
+          }
+        }
+      ]
+    }
+  }
+}

@@ -49,7 +49,16 @@
 			"simpleTileset",
 			"audio"
 		],
-		"subfolders": []
+		"subfolders": [
+			{
+				"items": [
+					"Goblin",
+					"GoblinWarrior"
+				],
+				"subfolders": [],
+				"name": "Goblins"
+			}
+		]
 	},
 	"functionsName": "Funções",
 	"autosaveData": null,
@@ -184,7 +193,16 @@
 			"subfolders": []
 		},
 		"general": {
-			"items": [],
+			"items": [
+				{
+					"name": "Enemies.json",
+					"type": "application/json",
+					"sid": 470191517962284,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		}
 	},
