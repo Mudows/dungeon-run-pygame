@@ -1,0 +1,10 @@
+{
+	"name": "PlayerHpText",
+	"plugin-id": "Text",
+	"sid": 756430862586355,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": []
+}

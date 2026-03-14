@@ -22,6 +22,20 @@
 		},
 		{
 			"type": "plugin",
+			"id": "Text",
+			"name": "Texto",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "TiledBg",
+			"name": "Plano de Fundo em Blocos",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Tilemap",
 			"name": "Mosaico",
 			"author": "Scirra",
@@ -45,9 +59,7 @@
 	"uniqueId": "vcza8ht9hj7",
 	"objectTypes": {
 		"items": [
-			"player",
-			"simpleTileset",
-			"audio"
+			"simpleTileset"
 		],
 		"subfolders": [
 			{
@@ -61,10 +73,27 @@
 			{
 				"items": [
 					"HpBarBg",
-					"HpBarFill"
+					"HpBarFill",
+					"PlayerHpBarBg",
+					"PlayerHpBarFill",
+					"PlayerHpText"
 				],
 				"subfolders": [],
 				"name": "UI"
+			},
+			{
+				"items": [
+					"player"
+				],
+				"subfolders": [],
+				"name": "Player"
+			},
+			{
+				"items": [
+					"audio"
+				],
+				"subfolders": [],
+				"name": "PLUGINS"
 			}
 		]
 	},
@@ -124,6 +153,14 @@
 					"name": "combat.js",
 					"type": "application/javascript",
 					"sid": 512476082675550,
+					"script-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "hud.js",
+					"type": "application/javascript",
+					"sid": 264077627184545,
 					"script-info": {
 						"purpose": "none"
 					}

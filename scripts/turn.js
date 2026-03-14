@@ -178,8 +178,8 @@ export class Enemy {
     const bx = this.x;
     const by = this.y - HP_BAR_OFFSET_Y;
 
-    this._hpBarBg   = bgType.createInstance('UI', bx, by);
-    this._hpBarFill = fillType.createInstance('UI', bx, by);
+    this._hpBarBg   = bgType.createInstance('Game', bx, by);
+    this._hpBarFill = fillType.createInstance('Game', bx, by);
 
     this._hpBarBg.width   = HP_BAR_WIDTH;
     this._hpBarBg.height  = HP_BAR_HEIGHT;
