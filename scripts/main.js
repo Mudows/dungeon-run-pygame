@@ -13,7 +13,7 @@ function Tick(runtime) {
 
 runOnStartup(async (runtime) => {
   const grid  = new Grid(16);
-  const map   = new GameMap(32, 32, 6);
+  const map   = new GameMap(32, 32, 6, 'cave'); // <- troque o tema conforme o andar
   const turns = new TurnManager();
 
   turns.onTurnStart((n) => console.log(`--- Turno ${n} ---`));
@@ -105,16 +105,16 @@ runOnStartup(async (runtime) => {
       case 'a':
       case 'A':
         action = () => {
-          player.animationFrame = 1;
-          grid.move(player, -1, 0, map, turns.enemies, turns);
+          player.animationFrame = 1; // virado para a esquerda
+          return grid.move(player, -1, 0, map, turns.enemies, turns);
         };
         break;
       case 'ArrowRight':
       case 'd':
       case 'D':
         action = () => {
-          player.animationFrame = 0;
-          grid.move(player,  1, 0, map, turns.enemies, turns);
+          player.animationFrame = 0; // virado para a direita
+          return grid.move(player,  1, 0, map, turns.enemies, turns);
         };
         break;
     }

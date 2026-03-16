@@ -1,15 +1,24 @@
+import { themes, pickTile } from './themes.js';
+
 export class GameMap {
   /**
-   * @param {number} width    - largura do mapa em tiles
-   * @param {number} height   - altura do mapa em tiles
-   * @param {number} maxRooms - número máximo de salas (MVP: 6 no nível 1)
+   * @param {number} width     - largura do mapa em tiles
+   * @param {number} height    - altura do mapa em tiles
+   * @param {number} maxRooms  - número máximo de salas (MVP: 6 no nível 1)
+   * @param {string} themeName - tema visual da fase (definido em themes.js)
+   *                             Valores disponíveis: 'cave', 'catacomb', 'frozenHell'
    */
-  constructor(width = 32, height = 32, maxRooms = 6) {
+  constructor(width = 32, height = 32, maxRooms = 6, themeName = 'cave') {
     this.width    = width;
     this.height   = height;
     this.maxRooms = maxRooms;
 
-    // 0 = chão de sala, 1 = parede, 2 = chão de corredor
+    // Carrega o tema — define quais tiles do tileset serão usados
+    // Para trocar a aparência da fase, mude o themeName no main.js
+    this.theme = themes[themeName] ?? themes['cave'];
+
+    // Grid interno: 0 = chão, 1 = parede, 2 = corredor
+    // Esses valores são apenas lógicos — a aparência visual é definida pelo tema
     this.grid  = [];
     this.rooms = [];
 
@@ -282,10 +291,25 @@ export class GameMap {
   // Renderização (Construct 3 tilemap)
   // ---------------------------------------------------------------------------
 
+  /**
+   * Renderiza o mapa no tilemap do Construct 3 aplicando o tema visual.
+   *
+   * Cada célula do grid lógico é convertida para um índice de tile
+   * sorteado a partir das opções do tema ativo:
+   *   - chão (0) e corredor (2) → pool theme.floor  (mesmos tiles)
+   *   - parede (1)              → pool theme.wall
+   *
+   * O sorteio acontece aqui, na renderização — o grid lógico
+   * permanece com valores 0/1/2 para que a lógica do jogo não mude.
+   */
   render(tilemap) {
+    const { floor, wall } = this.theme;
+
     for (let y = 0; y < this.height; y++) {
       for (let x = 0; x < this.width; x++) {
-        tilemap.setTileAt(x, y, this.grid[y][x]);
+        const cell      = this.grid[y][x];
+        const tileIndex = cell === 1 ? pickTile(wall) : pickTile(floor);
+        tilemap.setTileAt(x, y, tileIndex);
       }
     }
   }

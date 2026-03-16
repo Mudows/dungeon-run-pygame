@@ -164,6 +164,14 @@
 					"script-info": {
 						"purpose": "none"
 					}
+				},
+				{
+					"name": "themes.js",
+					"type": "application/javascript",
+					"sid": 557847163032635,
+					"script-info": {
+						"purpose": "none"
+					}
 				}
 			],
 			"subfolders": []
