@@ -31,8 +31,8 @@ export const themes = {
   // Tema padrão — Caverna (labirintos 1–3, MVP)
   cave: {
     floor: [
-      { index: 0, weight: 70 }, // chão principal
-      { index: 2, weight: 20 }, // variação com pequena pedra
+      { index: 0, weight: 85 }, // chão principal
+      { index: 2, weight: 5 }, // variação com pequena pedra
       { index: 3, weight: 10 }, // variação com rachadura
     ],
     wall: [

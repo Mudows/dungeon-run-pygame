@@ -58,9 +58,7 @@
 	],
 	"uniqueId": "vcza8ht9hj7",
 	"objectTypes": {
-		"items": [
-			"simpleTileset"
-		],
+		"items": [],
 		"subfolders": [
 			{
 				"items": [
@@ -94,6 +92,13 @@
 				],
 				"subfolders": [],
 				"name": "PLUGINS"
+			},
+			{
+				"items": [
+					"simpleTileset"
+				],
+				"subfolders": [],
+				"name": "Tilesets"
 			}
 		]
 	},
